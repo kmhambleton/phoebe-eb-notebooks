@@ -1,0 +1,17 @@
+#The input parameteres and datafile locations for KIC 8430105. This file (and this file only) should be updated when fitting a different object 
+# Effective temperature - red giant:
+teff_rg = 5042
+# Binary star period (is assumed accurate)
+period = 63.32710558
+# Zero point in time for the system (must be in the same units as the data and should be within the acquired data range)
+ztime = 54976.635546+20*period
+# Underestimated initial radii - we underestimate the radii to ensure that unwanted mass transfer does not occur when extracting information from the geometry of the light and radial velocity curves (for this system, the radii are closer to 1 Rsun and 7 Rsun).
+# Radius - main sequence star (if both stars are red giants, this should be the hotter star)
+r_ms = 0.7
+# Radius - red giant star (if both stars are red giants, this should be the cooler star)
+r_rg = 5.
+# Light curve and radial velocity data - these must all be in the same time units (you will get strange offsets between the models and data if they are not):
+lc1 = "data/detrended_aggressive.dat"
+lc2 = "data/detrended_gps.dat"
+rv_rg = "data/rv_cold.dat"
+rv_ms = "data/rv_hot.dat"
